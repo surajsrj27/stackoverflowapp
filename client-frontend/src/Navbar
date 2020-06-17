@@ -1,0 +1,62 @@
+import React, {Fragment} from 'react'
+import { Link, withRouter } from 'react-router-dom';
+import { signout, isAuthenticated } from "./auth/index";
+
+const AppNavbar = () => {
+    return (
+        <div className="container-fluid bg-dark">
+            <div className="row">
+                <div className="col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                    <Link className="mx-2 my-2" to="/" style={{color: 'white'}}><h3><i className="stack overflow icon" style={{color: '#f77205'}}></i>StackOverflow</h3></Link>
+                </div>
+                <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12"></div>
+                <div className="col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                    <div className="row">
+                        <div className="col-md-6 col-sm-12">
+                            <Link className="mx-2 my-2 text-secondary" to="/community">
+                                <h3>Community</h3>
+                            </Link>
+                        </div>
+                        <div className="col-md-6 col-sm-12">
+                            <Link className="mx-2 my-2 text-secondary" to="/profile">
+                                <h3>Profile</h3>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                    {!isAuthenticated() && (
+                        <div className="row">
+                            <div className="col-md-6 col-sm-12">
+                                <Link className="mx-2 my-2 text-primary" to="/signup">
+                                    <h3>Signup</h3>
+                                </Link>
+                            </div>
+                            <div className="col-md-6 col-sm-12">
+                                <Link className="mx-2 my-2 text-primary" to="/signin">
+                                    <h3>Signin</h3>
+                                </Link>
+                            </div>
+                        </div>
+                    )}
+                    {isAuthenticated() && (
+                        <div className="row">
+                            <div className="col-md-12 col-sm-12">
+                                <Link className="mx-2 my-2 text-warning"
+                                onClick={() => {signout(() => {})}}
+                                to="/"
+                                style={{color: 'white'}}
+                                >
+                                    <h3>Signout</h3>
+                                </Link>
+                            </div>
+                        </div>    
+                    )}
+                </div>
+            </div>
+        </div>  
+    )
+}
+
+export default withRouter(AppNavbar);
+
