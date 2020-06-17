@@ -38,7 +38,7 @@ const ShowAllQuestions = () => {
                             return(
                                 <div className="container item" key={question._id}>
                                 <div className="row">
-                                    <div className="col-3">
+                                    <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                                         <div className="row">
                                             <div className="col-6">
                                                 <div className="row">
@@ -54,7 +54,7 @@ const ShowAllQuestions = () => {
                                             </div>
                                         </div>    
                                     </div>
-                                    <div className="col-9">
+                                    <div className="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9">
                                         <Link to={`/singlequest/${question._id}`} style={{ color: '#3CA3EA' }}><h2 className="font-weight-light">{question.name}</h2></Link>
                                     </div>
                                 </div>

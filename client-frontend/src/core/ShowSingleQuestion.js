@@ -129,9 +129,10 @@ const ShowSingleQuestion = ({ match }) =>{
             <AppNavbar />
             <div className="container mt-5">
                 <div>{checkVotes(upvotes)}</div>
+
                 <div className="row mt-3">
-                    <div className="col-9"><h2>{name}</h2></div>
-                    <div className="col-3" style={{textAlign:"right"}}>
+                    <div className="col-8 col-sm-8 col-md-9 col-lg-9 col-xl-9"><h2>{name}</h2></div>
+                    <div className="col-4 col-sm-4 col-md-3 col-lg-3 col-xl-3" style={{textAlign:"right"}}>
                         <Link to="/askquestion" className="ui button primary">Ask Question</Link>
                     </div>
                 </div>

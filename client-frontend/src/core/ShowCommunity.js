@@ -27,7 +27,7 @@ const ShowCommunity = () => {
             <AppNavbar />
             <div className="container mt-5">
                 <div className="row">
-                    <div className="col-6 ui middle aligned divided list">
+                    <div className="col-6 ml-4 ui middle aligned divided list">
                         <h2>Community</h2>
                         {profiles.map(profile => {
                             return (

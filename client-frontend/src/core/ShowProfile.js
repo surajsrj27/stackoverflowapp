@@ -47,9 +47,9 @@ const ShowProfile = () => {
     const checkProfile = () => {
         if(success){
             return (
-                <div className="row">
-                    <div className="col-6">
-                        <table class="ui celled striped table">
+                <div className="row mb-3">
+                    <div className="col-8 col-sm-8 col-md-6 col-lg-6 col-xl-6">
+                        <table className="ui celled striped table">
                             <thead>
                                 <tr><th colspan="3">
                                 <h1>{username}</h1>
@@ -58,40 +58,40 @@ const ShowProfile = () => {
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="collapsing">Website</td>
+                                    <td>Website</td>
                                     <td>{website}</td>
                                 </tr>
                                 <tr>
-                                    <td class="collapsing">Country</td>
+                                    <td>Country</td>
                                     <td>{country}</td>
                                 </tr>
                                 <tr>
-                                    <td class="collapsing">portfolio</td>
+                                    <td>Portfolio</td>
                                     <td>{portfolio}</td>
                                 </tr>
                                 <tr>
-                                    <td class="collapsing">Languages</td>
+                                    <td>Languages</td>
                                     <td>{languages &&
                                         languages.map(language => (
                                             <p className="ui label">{language}</p>
                                     ))}</td>
                                 </tr>
                                 <tr>
-                                    <td class="collapsing">Youtube</td>
+                                    <td>Youtube</td>
                                     <td>{youtube}</td>
                                 </tr>
                                 <tr>
-                                    <td class="collapsing">Facebook</td>
+                                    <td>Facebook</td>
                                     <td>{facebook}</td>
                                 </tr>
                                 <tr>
-                                    <td class="collapsing">Instagram</td>
+                                    <td>Instagram</td>
                                     <td>{instagram}</td>
                                 </tr>
                             </tbody>    
                         </table>
                     </div>
-                    <div className="col-6">
+                    <div className="col-4 col-sm-4 col-md-6 col-lg-6 col-xl-6">
                         <ProfileQACount userId={user._id} />
                     </div>
                 </div>
